@@ -1,4 +1,8 @@
 import streamlit as st
+# ─── ページ設定は最初の Streamlit コマンドとして配置 ─────────────────
+st.set_page_config(page_title="📚 読書理解チェックアプリ (MVP)")
+
+
 from dotenv import load_dotenv
 import chardet
 
@@ -11,13 +15,10 @@ from utils.db import init_db, save_questions, save_answer
 # ─── 初期設定 ─────────────────────────
 load_dotenv()
 
-import os
-st.write("APIキー:", os.getenv("OPENAI_API_KEY"))  # デバッグ用。公開時は消しましょう
-
 
 init_db()
-st.set_page_config(page_title="📚 読書理解チェックアプリ (MVP)")
 st.title("📚 読書理解チェックアプリ (MVP)")
+
 
 # ─── サイドバー：チャンクあたりの質問数 ─────────────────
 n_q = st.sidebar.slider(
