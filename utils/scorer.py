@@ -8,7 +8,7 @@ import re
 load_dotenv()
 
 _scorer_llm = ChatOpenAI(
-    model="gpt-3.5-turbo",
+    model="gpt-4o-mini",
     temperature=0.0,
     openai_api_key=os.getenv("OPENAI_API_KEY")
 )

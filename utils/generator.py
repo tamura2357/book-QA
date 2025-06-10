@@ -7,7 +7,7 @@ from langchain_openai import ChatOpenAI
 load_dotenv()
 
 _llm = ChatOpenAI(
-    model="gpt-3.5-turbo",
+    model="gpt-4o-mini",
     temperature=0.7,
     openai_api_key=os.getenv("OPENAI_API_KEY")
 )
