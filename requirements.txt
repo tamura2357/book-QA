@@ -1,5 +1,7 @@
 streamlit
 python-dotenv
 langchain
+langchain-community
+langchain-openai
 openai
 chardet
