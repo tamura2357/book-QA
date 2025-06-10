@@ -16,3 +16,4 @@ db/
 
 # macOS etc.
 .DS_Store
+.env
