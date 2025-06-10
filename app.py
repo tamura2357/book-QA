@@ -10,6 +10,11 @@ from utils.db import init_db, save_questions, save_answer
 
 # ─── 初期設定 ─────────────────────────
 load_dotenv()
+
+import os
+st.write("APIキー:", os.getenv("OPENAI_API_KEY"))  # デバッグ用。公開時は消しましょう
+
+
 init_db()
 st.set_page_config(page_title="📚 読書理解チェックアプリ (MVP)")
 st.title("📚 読書理解チェックアプリ (MVP)")
